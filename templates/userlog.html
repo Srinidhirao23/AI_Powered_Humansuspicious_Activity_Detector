@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Crime Detection</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/he/1.2.0/he.js" integrity="sha512-o4gKX6jcK0rdciOZ9X8COYkV9gviTJAbYEVW8aC3OgIRuaKDmcT9/OFXBVzHSSOxiTjsTktqrUvCUrHkQHSn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+    body{
+      background-image: url('https://miro.medium.com/v2/resize:fit:1400/0*blhdwOt6gQNrmGwq');
+      background-repeat: no-repeat;
+      background-size: 100% 100vh;
+    }
+    #form1{
+      width: 40%;
+      margin: auto;
+      padding: 25px 50px;
+      background-color: rgba(0, 0, 0, 0.50);
+      margin-top: 50px !important;
+      color: white;
+    }
+    #content{
+      display: flex;
+      justify-content: space-around;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/">HUMAN SUSPECIOUS ACTIVITY</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/"> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container" id="content">
+    <form  method="post" action="{{ url_for('video')}}" id="form1">
+      <center><h2>Analyse</h2></center>
+      <hr>
+      <div class="form-group">
+        <!-- <label for="filename">choose file:</label> -->
+        <input type="file" class="form-control" id="filename" name="filename">
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button></br></br>
+    </form>
+    
+    <div id="form1">
+      <center><h2>YOLO</h2></center>
+      <hr>
+      <a href="/Live" class="btn btn-success">Streaming</a>
+    </div>
+</div>
+</body>
+</html>
